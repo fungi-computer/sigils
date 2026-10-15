@@ -1,0 +1,136 @@
+@import "@fungi.computer/stipe/styles.css";
+
+.sigils-page {
+  --ink: var(--color-base-content);
+  --muted: var(--stipe-fg-muted);
+  --line: var(--stipe-linework);
+  color: var(--ink);
+  background: var(--color-base-100);
+  min-height: 100vh;
+  padding: clamp(20px, 4vw, 56px);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.sigils-page * {
+  box-sizing: border-box;
+}
+.sigils-page h1,
+.sigils-page h2,
+.sigils-page h3,
+.sigils-page p {
+  margin: 0;
+}
+.sigils-page a {
+  color: inherit;
+}
+
+.sigils-hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1450px;
+  margin: 0 auto 32px;
+}
+.sigils-kicker {
+  color: #7b4d98;
+  font:
+    700 12px ui-monospace,
+    monospace;
+  letter-spacing: 0.18em;
+  margin-bottom: 8px !important;
+}
+.sigils-hero h1 {
+  font-size: clamp(40px, 5vw, 68px);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+.sigils-hero p:not(.sigils-kicker) {
+  max-width: 700px;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.5;
+}
+.sigils-hero a {
+  flex: none;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-weight: 650;
+}
+.sigils-hero a:hover {
+  background: #e8edf6;
+}
+.sigils-hero a:focus-visible,
+.sigils-page button:focus-visible,
+.sigils-page input:focus-visible,
+.sigils-page select:focus-visible {
+  outline: 3px solid #7543bb;
+  outline-offset: 2px;
+}
+
+.sigils-svg {
+  display: block;
+  width: 152px;
+  height: 152px;
+}
+.sigils-svg svg {
+  width: 100%;
+  height: 100%;
+}
+.sigils-image {
+  width: 152px;
+  height: 152px;
+  object-fit: contain;
+}
+.sigils-crop {
+  display: block;
+  width: 152px;
+  height: 152px;
+}
+.sigils-reference-grid {
+  max-width: 1450px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 440px), 1fr));
+  gap: 18px;
+}
+.sigils-reference {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: white;
+}
+.sigils-reference img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #202923;
+}
+.sigils-reference figcaption {
+  display: grid;
+  gap: 5px;
+  padding: 15px;
+}
+.sigils-reference figcaption strong {
+  font-size: 16px;
+}
+.sigils-reference figcaption span {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+@media (max-width: 650px) {
+  .sigils-hero {
+    display: block;
+  }
+  .sigils-hero a {
+    display: inline-block;
+    margin-top: 20px;
+  }
+}

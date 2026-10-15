@@ -1,0 +1,66 @@
+{
+  "expectedTarballFiles": [
+    "package/LICENSE",
+    "package/README.md",
+    "package/dist/approved-app-art.d.ts",
+    "package/dist/approved-app-art.js",
+    "package/dist/generation-art.d.ts",
+    "package/dist/generation-art.js",
+    "package/dist/index.d.ts",
+    "package/dist/index.js",
+    "package/dist/motifs.d.ts",
+    "package/dist/motifs.js",
+    "package/dist/sigil.d.ts",
+    "package/dist/sigil.js",
+    "package/package.json"
+  ],
+  "localDependencies": [],
+  "runtimeFixture": "test/stranger/runtime.mjs",
+  "typecheckFixture": "test/stranger/consumer.mts",
+  "consumerDevDependencies": {
+    "@types/node": "24.13.3",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "docs": {
+    "sigil": "list",
+    "home": {
+      "lead": "Render an approved illustrated symbol.",
+      "example": {
+        "file": "home.ts",
+        "title": "Create a Sigil",
+        "caption": "A decorative SVG element from the maintained symbol vocabulary."
+      },
+      "ladder": {
+        "start": [
+          {
+            "title": "Quickstart",
+            "href": "/quickstart/",
+            "description": "Run the first example and read its host requirements."
+          }
+        ],
+        "tasks": [
+          {
+            "title": "Examples",
+            "href": "/examples/",
+            "description": "Read worked usage and the checks that exercise it."
+          }
+        ],
+        "reference": [
+          {
+            "title": "API reference",
+            "href": "/api/",
+            "description": "Find public entrypoints and their documented contracts."
+          },
+          {
+            "title": "Install",
+            "href": "/install/",
+            "description": "Check dependencies and runtime requirements."
+          }
+        ]
+      }
+    }
+  }
+}

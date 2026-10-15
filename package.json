@@ -1,0 +1,71 @@
+{
+  "name": "@fungi.computer/sigils",
+  "version": "0.0.1",
+  "author": "Levi <levi@technomancy.dev>",
+  "private": false,
+  "description": "Fungi's approved illustrated symbols and visual studies",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "lint": "eslint src workbench .ladle --max-warnings=0 && ../../node_modules/.bin/oxlint --config ../../oxlint.config.ts --deny-warnings src workbench .ladle",
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "workbench": "ladle serve --host 127.0.0.1 --port 61031",
+    "workbench:build": "ladle build --outDir ../../.botanical/sigils-ladle",
+    "format:check": "node ../../tooling/repository/scripts/format-package-check.mjs",
+    "lint:anti-slop": "node ../../tooling/repository/scripts/lint-package-anti-slop.mjs",
+    "pack": "mkdir -p ../../.botanical/sigils-pack && pnpm pack --pack-destination ../../.botanical/sigils-pack",
+    "stranger": "tsx ../../tooling/repository/src/artifacts/cli.ts --repo-root ../.. .",
+    "smoke": "node test/stranger/runtime.mjs",
+    "prepack": "node scripts/prepare-package.mjs",
+    "docs": "node ../../apps/package-docs/scripts/build-sites.mjs --check sigils"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1 || ^19.2.0"
+  },
+  "devDependencies": {
+    "@fungi.computer/stipe": "workspace:*",
+    "@ladle/react": "5.1.1",
+    "@tailwindcss/vite": "4.2.1",
+    "@types/react": "18.3.3",
+    "react": "18.3.1",
+    "typescript": "5.9.3",
+    "react-dom": "18.3.1"
+  },
+  "botanical": {
+    "role": "package",
+    "operations": {
+      "lint": "required",
+      "typecheck": "required",
+      "build": "required",
+      "test": {
+        "status": "not-applicable",
+        "reason": "Static SVG artwork is checked through its Tourtois permission consumer and Ladle visual review."
+      },
+      "docs": "required",
+      "pack": "required",
+      "smoke": "required",
+      "stranger": "required"
+    }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fungi-computer/sigils.git"
+  },
+  "publishConfig": {
+    "directory": ".botanical/package",
+    "linkDirectory": false
+  }
+}
