@@ -10,6 +10,7 @@ import {
   FaceEyes,
   GroveBubbles,
   InkTrail,
+  Leaf,
   OpenBook,
   Pencil,
   SpeechBubble,
@@ -24,21 +25,31 @@ import {
 const { coral, blue, mint, grape, yellow, cream, ink } = art;
 
 const symbols = {
-  // Retained Bonsai favicon branching mark, scaled from its 32px viewBox.
+  // Bonsai: a potted tree whose branches end in commits.
   bonsai: (
-    <g transform="scale(2)">
-      <rect width="32" height="32" rx="8" fill="#242c28" />
+    <>
       <path
-        d="M9 23V9m0 4c0 4 14 2 14 9"
         fill="none"
-        stroke="#63cfaa"
-        strokeWidth="3"
+        stroke={mint}
+        strokeWidth="3.7"
         strokeLinecap="round"
+        d="M35 27.5C36 25 35.5 22.5 34 21S31.5 17.5 31.5 14M36 27C40 26.8 43 26 45 24S47 20.5 47.5 18.5M30.5 31C32.5 26.5 30.5 24.6 26.5 24 22 23.5 18.5 21.6 16.8 18.5M29 37C26.5 34.5 25 33.7 21.5 33.2S15.5 32 13 31.6M36 39.5C38 38 40 37.5 42 36.5S47 34 51 32.2"
       />
-      <circle cx="9" cy="9" r="3" fill="#43a6f2" />
-      <circle cx="9" cy="23" r="3" fill="#fff4de" />
-      <circle cx="23" cy="22" r="3" fill="#ff6558" />
-    </g>
+      <path
+        fill={mint}
+        d="M25.5 43.5C28 40.5 28 37 27.5 33 27.3 29.5 29.5 27 33.5 26.3L37.5 26V29.5C35 29.8 34.2 31.5 34.3 34 34.5 37.5 37 39.5 41 43.5Z"
+      />
+      <circle fill={blue} cx="31.5" cy="10.7" r="4.8" />
+      <circle fill={grape} cx="16.6" cy="18.3" r="4.6" />
+      <circle fill={yellow} cx="47.9" cy="17.7" r="4.6" />
+      <circle fill={yellow} cx="12.8" cy="31.5" r="4.6" />
+      <circle fill={blue} cx="50.9" cy="32.1" r="4.6" />
+      <path
+        fill={coral}
+        d="M16 46H47.5C47.5 54 44 58 38 58H25.5C19.5 58 16 54 16 46Z"
+      />
+      <rect fill={coral} x="14" y="43" width="35.5" height="4.6" rx="2.3" />
+    </>
   ),
   computer: <ComputerArtwork />,
   prints: <PrintsArtwork />,
@@ -422,6 +433,416 @@ const symbols = {
         d="M32 18v15"
       />
       <circle style={{ fill: cream }} cx="32" cy="45" r="4" />
+    </>
+  ),
+  // Trellis: workflow steps growing up a trellis.
+  trellis: (
+    <>
+      <g fill={yellow}>
+        <rect x="17.25" y="9" width="3.9" height="49.2" rx="1.95" />
+        <rect x="42.95" y="9" width="3.9" height="49.2" rx="1.95" />
+        <rect x="30.4" y="18" width="3.2" height="26" />
+        <rect x="14.8" y="15.75" width="34.4" height="3.1" rx="1.55" />
+        <rect x="14.8" y="28.85" width="34.4" height="3.1" rx="1.55" />
+        <rect x="14.8" y="42.55" width="34.4" height="3.1" rx="1.55" />
+      </g>
+      <path
+        fill="none"
+        stroke={mint}
+        strokeWidth="3"
+        strokeLinecap="round"
+        d="M21.9 56.1C31.5 54.4 32.9 47 32.1 45.8"
+      />
+      <path
+        fill="none"
+        stroke={mint}
+        strokeWidth="3"
+        strokeLinecap="round"
+        d="M32 44.2C28.7 41.8 25.2 35.7 32 32.3 38.8 28 38.9 24 31.9 18.8 32.4 16.3 32.8 14.7 34.5 12.2"
+      />
+      <Leaf transform="translate(32.1 14.1) rotate(45) scale(0.45 0.86)" />
+      <Leaf transform="translate(32.2 14.7) rotate(-60) scale(0.42 0.58)" />
+      <Leaf transform="translate(34.8 28.3) rotate(65) scale(0.38 0.8)" />
+      <Leaf transform="translate(28.2 33.1) rotate(-51) scale(0.5 0.57)" />
+      <Leaf transform="translate(28.6 53.3) rotate(-48) scale(0.47 0.6)" />
+      <circle fill={coral} cx="31.9" cy="18.8" r="4" />
+      <circle fill={blue} cx="32" cy="32.3" r="4" />
+      <circle fill={grape} cx="32" cy="44.2" r="4" />
+    </>
+  ),
+  // Games: an arcade stick for the Team's game servers.
+  games: (
+    <>
+      <path
+        fill={blue}
+        d="M18.5 28.5H45.5C49.5 29.5 53 32 54 35 55 37.5 56.8 45.5 56.6 48 56.5 53 52.5 57.5 47 58H15C9.5 56.5 6.6 51 7.6 45.5 8.6 39.5 9.3 35 10.5 33 12 31 14.5 29.5 18.5 28.5Z"
+      />
+      <ellipse fill={cream} cx="26.8" cy="37.9" rx="9.1" ry="5.6" />
+      <ellipse fill={ink} cx="27" cy="37.6" rx="4.7" ry="2.2" />
+      <path fill={ink} d="M23.1 26V35.4A4 4.2 0 0 0 31.1 35.4V26Z" />
+      <circle fill={coral} cx="27.1" cy="18.3" r="12.4" />
+      <circle fill={cream} cx="22.6" cy="14.3" r="3.05" />
+      <ellipse fill={yellow} cx="45.1" cy="37.2" rx="5.6" ry="3.95" />
+      <ellipse fill={cream} cx="40.1" cy="46.6" rx="6.2" ry="4.4" />
+    </>
+  ),
+  // Oyster: the open shell that holds the Apps' pearl.
+  oyster: (
+    <>
+      <path
+        fill={grape}
+        d="M35.5 6C33.7 6.3 32.3 7.6 31.4 9.4 30.9 10.3 30.4 10.3 29.5 10 25.5 9 20.6 11.6 19.6 15.9 19.4 16.6 19 17 18 17.1 14.5 17.6 12 20.6 12.1 24.2 12.2 25.4 12 25.9 11.5 26.5 7.5 30 10.5 34.5 17.5 34.4 15.3 32.6 16 31 19 29 26 24 37 19.5 43.5 19 46 19 46 22 43 25.5 46.5 23.5 51.5 18.5 53.5 15 55 11 50 7 45 9 43.8 9.4 43.3 9.2 42.5 8 40.7 6.3 38 5.6 35.5 6Z"
+      />
+      <circle fill={cream} cx="34.9" cy="41.9" r="11.3" />
+      <g fill={ink}>
+        <rect x="29.9" y="33.2" width="3.2" height="5.6" rx="1.6" />
+        <rect x="36.7" y="33.2" width="3.2" height="5.6" rx="1.6" />
+      </g>
+      <path
+        fill={grape}
+        d="M49.5 39C47.9 39.3 46.5 40 46.1 41.6 45.8 43.2 45.5 43.5 44 43.5 38.5 43.5 35 48 39 49.5 40 50 39.5 50.5 38 51 35.5 52.5 32.5 52 30 51 29 50.5 28.5 50 29.5 50 33 47.5 30 43.5 24.5 43.5 23.3 43.5 22.9 43.3 22.5 43 20.5 40.5 19 40 17.5 39.5 13 39.5 13 44 17 47.5 18.3 48.4 18.6 48.7 19 49.5 20.5 53 23 55 26 55 26.8 55 27 55.3 27.5 56 31 58.5 36.5 58.5 40 56 40.8 55.2 41.2 55 42 55 45 55 47.5 53 49 49.5 49.6 48.5 50 48 50.5 47.5 56 43.5 55 38.5 49.5 39Z"
+      />
+      <path
+        fill="none"
+        stroke={yellow}
+        strokeWidth="3"
+        strokeLinecap="round"
+        d="M46.6 31.8 49.2 27.8 M49.4 35.5 52.8 33.7 M21.5 32.5 22.9 33.5 M19.3 37.5 21.1 38.1"
+      />
+    </>
+  ),
+  // Tourtois: the desktop shell, a tortoise carrying window panes.
+  tourtois: (
+    <>
+      <rect
+        fill={cream}
+        x="11.07"
+        y="35.73"
+        width="26.8"
+        height="9.7"
+        rx="3.25"
+        transform="rotate(-5 24.47 40.58)"
+      />
+      <path
+        fill={yellow}
+        d="M14.8 16C19 14.6 23 13.5 26.5 12.6 28.4 12.1 29.6 13.4 30.1 15.3L31.6 21 17.4 37.6C13.8 38.2 10.6 37.8 10.1 35.4L9.2 27.8C9.1 26.1 10.1 24.7 11.6 24.1 11.4 22.4 11.4 20.6 11.8 19.1 12.3 17.4 13.3 16.5 14.8 16Z"
+      />
+      <path
+        fill={coral}
+        d="M14.0 24.1Q13.3 21.2 16.2 20.4L30.7 16.2Q33.6 15.4 34.6 18.2L36.0 22.7Q37.0 25.5 34.7 27.4L20.2 39.7Q17.9 41.6 17.2 38.7Z"
+      />
+      <path
+        fill={blue}
+        d="M21 23.4 35.5 20.6C37.3 20.2 38.6 21 38.9 22.6L40 34.5C40.1 36.2 39.1 37.3 37.5 37.7 32.6 39.9 26 41 21 41 16 41 12.2 40.2 11 38.8 10.4 37.6 10.8 36.4 12.4 37L19.6 38.4 18.4 27C18.2 25.2 19.3 23.7 21 23.4Z"
+      />
+      <path
+        fill={cream}
+        d="M22.8 29.6 34.8 26.9C36.2 26.6 37 27.3 37.2 28.6L37.9 33C38.1 34.2 37.5 35 36.3 35.3L24.3 37.8C23 38.1 22.3 37.5 22.1 36.3L21.3 31.6C21.1 30.6 21.7 29.8 22.8 29.6Z"
+      />
+      <g fill={cream}>
+        <circle cx="14.7" cy="18.45" r="1" />
+        <circle cx="17.6" cy="17.65" r="1" />
+        <circle cx="20.5" cy="16.85" r="1" />
+        <circle cx="17.9" cy="22.2" r="1" />
+        <circle cx="21" cy="21.5" r="1" />
+        <circle cx="24.1" cy="20.75" r="1" />
+        <circle cx="28.2" cy="25.3" r="1" />
+      </g>
+      <circle fill={coral} cx="21.7" cy="26.6" r="1" />
+      <circle fill={yellow} cx="24.9" cy="25.9" r="1.05" />
+      <g fill={mint}>
+        <ellipse
+          cx="8.8"
+          cy="36.6"
+          rx="3.6"
+          ry="1.9"
+          transform="rotate(22 8.8 36.6)"
+        />
+        <path d="M12 41C10 41.5 7.5 44.5 7 46.5 7 48 8.5 49.5 10.5 50 12.5 50.5 13.5 50 15 48 15.5 47 16.5 47.5 19 50 22 49.5 22 46.5 22 45.5 20.5 45.5 17 45 16.5 44.5 16.5 44 16.5 42 13.5 40.5 12 41Z" />
+        <path d="M40 33C39 38 36 42 34.5 41.5 32.5 40.5 29.5 42 28.5 44 26 49 27.5 51.5 32.5 51 36 51 37 50 36 46.5 36 45 37 44.5 38 44.5 38.5 45.5 40.5 49 43.5 50 46.5 47.5 47.5 46.5 46 43.5 44 42 43 41.5 43.5 40.5 44.5 39.5 46 38 47 37.5L47 33Z" />
+      </g>
+      <ellipse fill={mint} cx="46.4" cy="30.6" rx="8.1" ry="8.3" />
+      <g fill={ink}>
+        <rect
+          x="45.05"
+          y="26.95"
+          width="2.25"
+          height="4.6"
+          rx="1.1"
+          transform="rotate(-6 46.2 29.3)"
+        />
+        <rect
+          x="49.25"
+          y="26.4"
+          width="2.25"
+          height="4.6"
+          rx="1.1"
+          transform="rotate(-6 50.4 28.7)"
+        />
+      </g>
+      <path
+        fill={coral}
+        d="M46.8 32.2H51C51 34.3 50 35.4 48.9 35.4S46.8 34.3 46.8 32.2Z"
+        transform="rotate(-8 48.9 33.5)"
+      />
+      <path
+        fill="none"
+        stroke={yellow}
+        strokeWidth="3"
+        strokeLinecap="round"
+        d="M50.9 17.7 50.5 19.7 M55.2 20.1 53.4 21.9 M56.5 24.5 55.7 24.7"
+      />
+    </>
+  ),
+  // The launcher's "All Apps": four App tiles, no install arrow.
+  allApps: (
+    <>
+      <rect
+        fill={coral}
+        x="7"
+        y="7.25"
+        width="23.2"
+        height="22.7"
+        rx="4.6"
+        transform="rotate(-6.2 18.6 18.6)"
+      />
+      <rect
+        fill={blue}
+        x="33.9"
+        y="7.25"
+        width="23.2"
+        height="22.7"
+        rx="4.6"
+        transform="rotate(6.2 45.5 18.6)"
+      />
+      <rect
+        fill={mint}
+        x="7"
+        y="34.15"
+        width="23.2"
+        height="22.7"
+        rx="4.6"
+        transform="rotate(6.2 18.6 45.5)"
+      />
+      <rect
+        fill={yellow}
+        x="33.9"
+        y="34.15"
+        width="23.2"
+        height="22.7"
+        rx="4.6"
+        transform="rotate(-6.2 45.5 45.5)"
+      />
+    </>
+  ),
+  // Search: a magnifying glass.
+  search: (
+    <>
+      <path fill="none" stroke={blue} strokeWidth="6.5" d="M37 37.5 43 43.5" />
+      <path
+        fill="none"
+        stroke={coral}
+        strokeWidth="12.6"
+        strokeLinecap="round"
+        d="M44.2 43.8 51.4 51.8"
+      />
+      <path
+        fill="none"
+        stroke={yellow}
+        strokeWidth="3"
+        strokeLinecap="round"
+        d="M47.2 42.4 52.8 47.8"
+      />
+      <ellipse fill={blue} cx="25.6" cy="24.6" rx="19.25" ry="18.6" />
+      <ellipse fill={cream} cx="25.2" cy="24.1" rx="14.2" ry="13.6" />
+    </>
+  ),
+  // An Agent's web browser: a window with the world inside.
+  browser: (
+    <>
+      <rect fill={coral} x="5.9" y="6.15" width="52.2" height="51.7" rx="5.5" />
+      <path
+        fill={cream}
+        d="M10 16.5H29.4C30.3 16.1 31 14.4 31.8 12.5 32.5 10.9 33.2 10 34.5 10H52.2C53.4 10 54 10.7 54 12V16.5C55.2 16.5 56 17.1 56 18.3V52.4C56 53.7 55.1 54.6 53.8 54.6H10.2C8.9 54.6 8 53.7 8 52.4V18.2C8 17.1 8.7 16.5 10 16.5Z"
+      />
+      <circle fill={yellow} cx="12.2" cy="11.9" r="1.95" />
+      <circle fill={blue} cx="18.6" cy="11.9" r="1.95" />
+      <circle fill={grape} cx="25.1" cy="11.9" r="1.95" />
+      <circle fill={mint} cx="32" cy="34.9" r="14.5" />
+      <g fill="none" stroke={cream} strokeWidth="3">
+        <ellipse cx="32" cy="34.9" rx="7.7" ry="13.3" />
+        <path d="M17.5 34.9H46.5" />
+      </g>
+    </>
+  ),
+  // The public web: a globe with an orbit.
+  internet: (
+    <>
+      <ellipse
+        fill="none"
+        stroke={yellow}
+        strokeWidth="4.4"
+        cx="32.2"
+        cy="30.2"
+        rx="25.6"
+        ry="8.1"
+        transform="rotate(-20.8 32.2 30.2)"
+      />
+      <circle fill={blue} cx="32" cy="32" r="21.1" />
+      <g fill="none" stroke={cream} strokeWidth="3">
+        <ellipse cx="32" cy="31.8" rx="12.2" ry="18.7" />
+        <path d="M32 13.1V50.5M15 20.4Q32 29 49 20.4M12.5 39Q32 44.6 51.5 39" />
+      </g>
+      <path
+        fill="none"
+        stroke={yellow}
+        strokeWidth="4.4"
+        d="M6.6 30.2A25.6 8.1 0 0 0 57.8 30.2"
+        transform="rotate(-20.8 32.2 30.2)"
+      />
+    </>
+  ),
+  // Members and invites: the people on a Team.
+  members: (
+    <>
+      <circle fill={blue} cx="41.9" cy="22.85" r="12.2" />
+      <path
+        fill={blue}
+        d="M36 34C33.8 34.8 32.2 35.8 31 37 37.5 39.5 40.5 43.5 40.5 49.5V53.5H54.5C57 53.5 58 51 58 47.5 58 40 55 35.5 49 34Z"
+      />
+      <circle fill={coral} cx="22.95" cy="27.6" r="12.85" />
+      <path
+        fill={coral}
+        d="M15.5 38C10.5 39 7.5 42.5 6.5 47 5.5 50.5 6 53.5 8.5 53.5H38.5C42 52 40 43 36 40 34.5 39 32 38 31 38Z"
+      />
+      <g fill={ink}>
+        <circle cx="18.3" cy="28" r="1.6" />
+        <circle cx="27.9" cy="28" r="1.6" />
+        <circle cx="39.1" cy="23.05" r="1.55" />
+        <circle cx="47.25" cy="23.05" r="1.55" />
+      </g>
+    </>
+  ),
+  // Selling Apps: coins and a price tag.
+  sell: (
+    <>
+      <path
+        fill={yellow}
+        d="M6.4 41.2V48.4C6.4 51.4 13.2 54 21.8 54S37.2 51.4 37.2 48.4V41.2C37.2 37.8 30.4 35 21.8 35S6.4 37.8 6.4 41.2Z"
+      />
+      <ellipse fill={cream} cx="21.9" cy="40.8" rx="13.2" ry="3.6" />
+      <g transform="rotate(-3 22.5 30) translate(0.5 0)">
+        <path
+          fill={yellow}
+          d="M7.5 26V34C7.5 37.3 14.2 40 22.5 40S37.5 37.3 37.5 34V26C37.5 22.7 30.8 20 22.5 20S7.5 22.7 7.5 26Z"
+        />
+        <ellipse fill={cream} cx="23.7" cy="26.55" rx="13.05" ry="4.4" />
+      </g>
+      <g transform="translate(46.3 40.3) rotate(-25)">
+        <path
+          fill={coral}
+          d="M-8.5-10Q-8.5-12-7-13L-1.5-16.3Q0-17.2 1.5-16.3L7-13Q8.5-12 8.5-10V9Q8.5 12 5.5 12H-5.5Q-8.5 12-8.5 9Z"
+        />
+        <circle fill={cream} cx="0" cy="-10.7" r="2.2" />
+      </g>
+      <TaperedRay
+        fill={yellow}
+        transform="translate(38.2 18.6) scale(1.1 .86)"
+      />
+      <TaperedRay
+        fill={yellow}
+        transform="translate(42.8 21.2) rotate(45) scale(1.1 .85)"
+      />
+    </>
+  ),
+  // Schedules and recurring runs: a calendar page with a clock.
+  schedule: (
+    <>
+      <rect fill={cream} x="6" y="11" width="47.6" height="44" rx="6" />
+      <path
+        fill={coral}
+        d="M12 11H47.6Q53.6 11 53.6 17V21.5H6V17Q6 11 12 11Z"
+      />
+      <g fill={cream}>
+        <circle cx="16.1" cy="16.15" r="3.4" />
+        <circle cx="43.4" cy="16.15" r="3.4" />
+      </g>
+      <g fill={blue}>
+        <rect x="13.6" y="6" width="5" height="11.2" rx="2.5" />
+        <rect x="40.9" y="6" width="5" height="11.2" rx="2.5" />
+      </g>
+      <g fill={mint}>
+        <rect x="11.1" y="25.1" width="6.9" height="6.6" rx="1.8" />
+        <rect x="20.7" y="25.1" width="6.9" height="6.6" rx="1.8" />
+        <rect x="30.4" y="25.1" width="6.9" height="6.6" rx="1.8" />
+        <rect x="20.7" y="33.9" width="6.9" height="6.6" rx="1.8" />
+        <rect x="30.4" y="33.9" width="6.9" height="6.6" rx="1.8" />
+        <rect x="11.1" y="42.7" width="6.9" height="6.6" rx="1.8" />
+        <rect x="30.4" y="42.7" width="6.9" height="6.6" rx="1.8" />
+      </g>
+      <g fill={grape}>
+        <rect x="40.4" y="25.1" width="6.9" height="6.6" rx="1.8" />
+        <rect x="11.1" y="33.9" width="6.9" height="6.6" rx="1.8" />
+        <rect x="20.7" y="42.7" width="6.9" height="6.6" rx="1.8" />
+      </g>
+      <circle fill={yellow} cx="45.5" cy="45.6" r="12.2" />
+      <path
+        fill="none"
+        stroke={ink}
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M45.1 39.3V46.2L51.3 49.8"
+      />
+      <circle fill={ink} cx="45.1" cy="46.2" r="2.5" />
+    </>
+  ),
+  // Fungi: Shiitake, the brand mushroom, winking.
+  fungi: (
+    <>
+      <ellipse
+        fill={cream}
+        cx="33.5"
+        cy="43.6"
+        rx="18.6"
+        ry="14.4"
+        transform="rotate(-6 33.5 43.6)"
+      />
+      <path
+        fill={coral}
+        d="M29.5 6.5C22 7.5 16 11 11 18.5 4 29 4.6 39.6 13.5 42.2 24 45 44 40.5 54 34.6 57.6 32.6 58.6 29.2 57.5 25 56.5 20 53 16 48.5 13 43.5 8 37 5.5 29.5 6.5Z"
+      />
+      <g fill={cream}>
+        <ellipse
+          cx="29"
+          cy="15.7"
+          rx="8.7"
+          ry="6.3"
+          transform="rotate(-15.5 29 15.7)"
+        />
+        <ellipse
+          cx="50.8"
+          cy="20.1"
+          rx="6.5"
+          ry="3.5"
+          transform="rotate(51.6 50.8 20.1)"
+        />
+        <ellipse
+          cx="13"
+          cy="26.8"
+          rx="4.2"
+          ry="3.3"
+          transform="rotate(-54.5 13 26.8)"
+        />
+      </g>
+      <g
+        fill={ink}
+        transform="translate(26.6 46.6) scale(1.1) translate(-33.7 -38.5)"
+      >
+        <rect x="31.85" y="35.9" width="3.75" height="5.25" rx="1.85" />
+        <path d="M 47.4 34.3 C 46 35 44.6 35.8 43.5 36.7 42.9 37.2 43.2 38.3 44 38.4 45.2 38.6 46.5 38.6 47.7 38.4 48.4 38.3 48.3 37.3 47.6 37.3 46.6 37.4 45.7 37.4 45 37.3 45.9 36.7 46.9 36.1 48 35.6 48.7 35.3 48.2 34 47.4 34.3 Z" />
+        <path d="M 37.4 41.1 C 38.6 44.3 42.6 44.3 43.6 40.5 43.7 40 43.1 39.8 42.9 40.3 41.9 42.8 39.1 42.9 38.3 40.7 38.1 40.2 37.3 40.5 37.4 41.1 Z" />
+      </g>
     </>
   ),
 } satisfies Record<string, ReactNode>;

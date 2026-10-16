@@ -150,3 +150,14 @@ export function InkTrail() {
     />
   );
 }
+
+/** A teardrop leaf, its point at the stem; 10 wide and 12 long before scaling. */
+export function Leaf({ transform }: { transform: string }) {
+  return (
+    <path
+      style={{ fill: art.mint }}
+      transform={transform}
+      d="M0 0C3 -2 5 -5 5 -8 5 -10.5 3 -12 0 -12S-5 -10.5 -5 -8C-5 -5 -3 -2 0 0Z"
+    />
+  );
+}
