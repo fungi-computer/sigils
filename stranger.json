@@ -4,6 +4,8 @@
     "package/README.md",
     "package/dist/approved-app-art.d.ts",
     "package/dist/approved-app-art.js",
+    "package/dist/favicon.d.ts",
+    "package/dist/favicon.js",
     "package/dist/generation-art.d.ts",
     "package/dist/generation-art.js",
     "package/dist/index.d.ts",
@@ -12,11 +14,16 @@
     "package/dist/motifs.js",
     "package/dist/sigil.d.ts",
     "package/dist/sigil.js",
+    "package/docs/api/README.md",
     "package/package.json"
   ],
   "localDependencies": [],
   "runtimeFixture": "test/stranger/runtime.mjs",
-  "typecheckFixture": "test/stranger/consumer.mts",
+  "typechecks": [
+    {
+      "fixture": "test/stranger/consumer.mts"
+    }
+  ],
   "consumerDevDependencies": {
     "@types/node": "24.13.3",
     "@types/react": "18.3.3",

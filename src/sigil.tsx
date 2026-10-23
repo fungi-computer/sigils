@@ -847,6 +847,10 @@ const symbols = {
   ),
 } satisfies Record<string, ReactNode>;
 
+/**
+ * Names accepted by the maintained Sigil registry.
+ * @useDeclaredType
+ */
 export type SigilName = keyof typeof symbols;
 
 /** Check an App declaration's icon against the maintained Sigil vocabulary. */

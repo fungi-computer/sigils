@@ -1,5 +1,20 @@
 # @fungi.computer/sigils
 
+## 0.2.0
+
+### Minor Changes
+
+- Changes since 0.1.0:
+
+  - feat(stranger): typecheck each public entry in its own environment
+  - fix(stranger): align the Oyster closure inventories and local dependencies
+  - feat(sigils): export the Fungi sigil as a tab icon
+  - docs(packages): inherit TSDoc configuration at package project roots
+  - docs(packages): ship API pages and describe Workflow wire exports
+  - docs(packages): generate catalog, Sigil and extension APIs
+  - docs(packages): wire shared public API documentation gates
+  - feat(oyster): public release 0.2.0
+
 ## 0.1.0
 
 ### Minor Changes

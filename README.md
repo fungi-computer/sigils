@@ -47,6 +47,12 @@ or imply that an interface uses it.
 See the public [component and type exports](src/index.tsx). `Sigil` and
 `isSigilName` are the runtime exports; `SigilName` is the type export.
 
+`@fungi.computer/sigils/favicon` exports `fungiFaviconSvg`, the Fungi sigil as a
+standalone SVG document, and `fungiFaviconHref`, the same SVG as a data URI for
+`<link rel="icon" type="image/svg+xml">`. The build renders
+`<Sigil name="fungi" />` once to produce both, so Fungi web surfaces take their
+tab icon from this one owner instead of keeping their own SVG.
+
 ## Examples and checks
 
 Start the local workbench from the repository root:
