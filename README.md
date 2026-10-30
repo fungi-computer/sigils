@@ -84,8 +84,7 @@ in the gallery instead of treating every available SVG as approved.
 
 The Reference pages pair source sheets with each mark and identify whether its
 vector is live, approved, or still a concept. Keep those source images and
-labels with the workbench. Sigils is a package and declares no package-level
-license.
+labels with the workbench. Sigils is MIT licensed; see [LICENSE](LICENSE).
 
 ## Theme colours
 
