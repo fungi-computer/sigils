@@ -13,22 +13,6 @@ const svg = renderToStaticMarkup(
 );
 const dist = new URL("../dist/", import.meta.url);
 await writeFile(
-  new URL("favicon.js", dist),
-  [
-    "/** The Fungi sigil as a standalone SVG document. */",
-    `export const fungiFaviconSvg = ${JSON.stringify(svg)};`,
-    '/** The same SVG as a data URI for <link rel="icon" type="image/svg+xml">. */',
-    "export const fungiFaviconHref = `data:image/svg+xml,${encodeURIComponent(fungiFaviconSvg)}`;",
-    "",
-  ].join("\n"),
-);
-await writeFile(
-  new URL("favicon.d.ts", dist),
-  [
-    "/** The Fungi sigil as a standalone SVG document. */",
-    "export declare const fungiFaviconSvg: string;",
-    '/** The same SVG as a data URI for <link rel="icon" type="image/svg+xml">. */',
-    "export declare const fungiFaviconHref: string;",
-    "",
-  ].join("\n"),
+  new URL("favicon-svg.js", dist),
+  `export default ${JSON.stringify(svg)};\n`,
 );

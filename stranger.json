@@ -4,6 +4,7 @@
     "package/README.md",
     "package/dist/approved-app-art.d.ts",
     "package/dist/approved-app-art.js",
+    "package/dist/favicon-svg.js",
     "package/dist/favicon.d.ts",
     "package/dist/favicon.js",
     "package/dist/generation-art.d.ts",

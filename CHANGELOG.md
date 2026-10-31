@@ -1,5 +1,15 @@
 # @fungi.computer/sigils
 
+## 0.2.1
+
+### Patch Changes
+
+- Changes since 0.2.0:
+
+  - fix(sigils): make the Tourtois foot path valid SVG
+  - fix(sigils): make favicon API source-owned
+  - fix(apps): require owner confirmation for every installation
+
 ## 0.2.0
 
 ### Minor Changes

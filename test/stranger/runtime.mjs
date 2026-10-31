@@ -9,8 +9,12 @@ const svg = renderToStaticMarkup(
 );
 assert.match(svg, /<svg/u);
 assert.match(svg, /aria-hidden="true"/u);
-const { fungiFaviconSvg, fungiFaviconHref } =
-  await import("@fungi.computer/sigils/favicon");
+const favicon = await import("@fungi.computer/sigils/favicon");
+assert.deepEqual(Object.keys(favicon).sort(), [
+  "fungiFaviconHref",
+  "fungiFaviconSvg",
+]);
+const { fungiFaviconSvg, fungiFaviconHref } = favicon;
 // The favicon is the Fungi sigil itself, rendered once by the owner. A
 // standalone SVG image needs its namespace; an inline <svg> does not.
 const namespace = "http://www.w3.org/2000/svg";

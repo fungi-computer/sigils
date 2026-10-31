@@ -394,7 +394,7 @@ export const marks: readonly Mark[] = [
     group: "Actions",
     status: "Concept",
     detail: "An App tile dropping into place, composed as SVG",
-    example: "Install free Apps without asking",
+    example: "Request an App install",
     sigil: "installApps",
   },
   {
