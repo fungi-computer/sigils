@@ -1,5 +1,13 @@
 # @fungi.computer/sigils
 
+## 0.2.2
+
+### Patch Changes
+
+- Changes since 0.2.1:
+
+  - fix(sigils): add illustrated session loop mark
+
 ## 0.2.1
 
 ### Patch Changes

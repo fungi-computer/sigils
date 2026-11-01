@@ -797,6 +797,28 @@ const symbols = {
       <circle fill={ink} cx="45.1" cy="46.2" r="2.5" />
     </>
   ),
+  // Loop: one prompt inside a returning circular arrow.
+  loop: (
+    <>
+      <path
+        style={{ stroke: coral }}
+        strokeWidth="6"
+        strokeLinecap="round"
+        d="M47.5 14.5C43 11 37.5 9 32 9 19.5 9 9 19.5 9 32S19.5 55 32 55 55 44.5 55 32"
+      />
+      <path
+        style={{ fill: coral }}
+        d="M53.5 21.5Q54.5 20 55 22L58 33Q58.5 35 56.5 34.5L48.5 32.5Q47 32 48 30.5Z"
+      />
+      <g transform="translate(18 21) scale(.28)">
+        <SpeechBubble fill={blue} />
+      </g>
+      <g style={{ fill: cream }}>
+        <rect x="25" y="27.5" width="14" height="3" rx="1.5" />
+        <rect x="25" y="33.5" width="9" height="3" rx="1.5" />
+      </g>
+    </>
+  ),
   // Fungi: Shiitake, the brand mushroom, winking.
   fungi: (
     <>

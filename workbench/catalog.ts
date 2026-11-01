@@ -234,6 +234,16 @@ export const marks: readonly Mark[] = [
     source: new URL("./round-two-drafts/schedule-a.png", import.meta.url).href,
   },
   {
+    id: "loop",
+    name: "Session Loop",
+    group: "Conversation",
+    status: "Approved",
+    detail:
+      "A prompt returning to one Session: a speech bubble inside a circular arrow",
+    sigil: "loop",
+    source: new URL("./round-two-drafts/loop-draft.png", import.meta.url).href,
+  },
+  {
     id: "vishnu",
     name: "Vishnu",
     group: "Apps",
