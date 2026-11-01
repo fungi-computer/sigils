@@ -35,7 +35,7 @@
   "docs": {
     "sigil": "list",
     "home": {
-      "lead": "Render an approved illustrated symbol.",
+      "lead": "Decorative SVG marks for React interfaces. Render a Sigil and give its enclosing control an accessible name.",
       "example": {
         "file": "home.ts",
         "title": "Create a Sigil",

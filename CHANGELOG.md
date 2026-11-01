@@ -1,5 +1,14 @@
 # @fungi.computer/sigils
 
+## 0.3.0
+
+### Minor Changes
+
+- Changes since 0.2.2:
+
+  - fix(docs): clarify key guides and finish clipped search phrases
+  - feat(sigils): add illustrated session loop mark
+
 ## 0.2.2
 
 ### Patch Changes
