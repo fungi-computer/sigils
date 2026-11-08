@@ -6,13 +6,11 @@ which drawings are approved, live, or still concepts.
 
 ## Install or set up
 
-Install `@fungi.computer/sigils` from its package tarball. It requires React
-18.3 or React 19.2 as a peer dependency. From the repository root, build it
-with:
-
 ```sh
-pnpm --filter @fungi.computer/sigils build
+npm install @fungi.computer/sigils react
 ```
+
+Sigils needs React 18.3 or 19.2 as a peer dependency.
 
 ## Quick start
 
@@ -84,7 +82,9 @@ in the gallery instead of treating every available SVG as approved.
 
 The Reference pages pair source sheets with each mark and identify whether its
 vector is live, approved, or still a concept. Keep those source images and
-labels with the workbench. Sigils is MIT licensed; see [LICENSE](LICENSE).
+labels with the workbench. Build it from the repository root with
+`pnpm --filter @fungi.computer/sigils build`. Sigils is MIT licensed; see
+[LICENSE](LICENSE).
 
 ## Theme colours
 
@@ -110,6 +110,3 @@ consumer, checks the exact shipped files, runs the public runtime fixture and
 compiles every JavaScript entrypoint with strict NodeNext and no library-check
 skip. This qualification does not publish npm releases or push a repository
 split.
-
-See [LICENSE](LICENSE) for the license and the package manifest for its public
-repository destination.
