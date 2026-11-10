@@ -1,5 +1,13 @@
 # @fungi.computer/sigils
 
+## 0.3.1
+
+### Patch Changes
+
+- Changes since 0.3.0:
+
+  - fix(docs): resolve package links before slashless serving
+
 ## 0.3.0
 
 ### Minor Changes

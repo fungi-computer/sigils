@@ -59,7 +59,7 @@ Start the local workbench from the repository root:
 pnpm --filter @fungi.computer/sigils workbench
 ```
 
-Open [http://127.0.0.1:61031/](http://127.0.0.1:61031/) to compare the grouped
+Open the local address printed by the workbench command to compare the grouped
 marks, approved examples, concepts, and reference images. Check source-image
 credits and status labels in the workbench before reusing artwork.
 
