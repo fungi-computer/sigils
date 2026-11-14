@@ -23,25 +23,17 @@
     "LICENSE"
   ],
   "scripts": {
-    "lint": "eslint src workbench .ladle --max-warnings=0 && ../../node_modules/.bin/oxlint --config ../../oxlint.config.ts --deny-warnings src workbench .ladle",
     "build": "tsc -p tsconfig.build.json && node scripts/emit-favicon.mjs",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "workbench": "ladle serve --host 127.0.0.1 --port 61031",
-    "workbench:build": "ladle build --outDir ../../.botanical/sigils-ladle",
-    "format:check": "node ../../tooling/repository/scripts/format-package-check.mjs",
-    "lint:anti-slop": "node ../../tooling/repository/scripts/lint-package-anti-slop.mjs",
-    "pack": "mkdir -p ../../.botanical/sigils-pack && pnpm pack --pack-destination ../../.botanical/sigils-pack",
-    "stranger": "tsx ../../tooling/repository/src/artifacts/cli.ts --repo-root ../.. .",
     "smoke": "node test/stranger/runtime.mjs",
-    "prepack": "node scripts/prepare-package.mjs",
-    "docs": "tsx ../../tooling/repository/src/docs/cli.ts check --root ../..",
-    "docs:write": "tsx ../../tooling/repository/src/docs/cli.ts write --root ../.."
+    "prepack": "node scripts/prepare-package.mjs"
   },
   "peerDependencies": {
     "react": "^18.3.1 || ^19.2.0"
   },
   "devDependencies": {
-    "@fungi.computer/stipe": "workspace:*",
+    "@fungi.computer/stipe": "0.1.1",
     "@ladle/react": "5.1.1",
     "@tailwindcss/vite": "4.2.1",
     "@types/react": "18.3.3",
