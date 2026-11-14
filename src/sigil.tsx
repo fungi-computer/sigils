@@ -285,6 +285,9 @@ const symbols = {
       />
     </>
   ),
+  stop: (
+    <rect style={{ fill: coral }} x="12" y="12" width="40" height="40" rx="9" />
+  ),
   connected: (
     <>
       <path

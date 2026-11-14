@@ -16,6 +16,7 @@ export const ReadConversations = () => <IconDetail id="read-conversations" />;
 export const SendPrompts = () => <IconDetail id="send-prompts" />;
 export const LlmGeneration = () => <IconDetail id="llm-generation" />;
 export const MediaGeneration = () => <IconDetail id="media-generation" />;
+export const StopComputer = () => <IconDetail id="stop-computer" />;
 export const Connected = () => <IconDetail id="connected" />;
 export const Working = () => <IconDetail id="working" />;
 export const Complete = () => <IconDetail id="complete" />;

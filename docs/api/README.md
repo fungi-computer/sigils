@@ -32,6 +32,7 @@ type SigilName =
   | "sendPrompts"
   | "write"
   | "run"
+  | "stop"
   | "connected"
   | "working"
   | "complete"
@@ -82,6 +83,7 @@ function isSigilName(
   | "sendPrompts"
   | "write"
   | "run"
+  | "stop"
   | "connected"
   | "working"
   | "complete"
@@ -115,9 +117,9 @@ Check an App declaration's icon against the maintained Sigil vocabulary.
 name is "search" \| "bonsai" \| "computer" \| "prints" \| "inkcap" \| "vishnu"
 \| "generateText" \| "generateMedia" \| "buyApps" \| "browseBazaar" \| "agent"
 \| "list" \| "chat" \| "read" \| "readConversations" \| "listAgents" \|
-"createAgents" \| "sendPrompts" \| "write" \| "run" \| "connected" \| "working"
-\| "complete" \| "installApps" \| "restricted" \| "error" \| "trellis" \|
-"games" \| "oyster" \| "tourtois" \| "allApps" \| "browser" \| "internet" \|
+"createAgents" \| "sendPrompts" \| "write" \| "run" \| "stop" \| "connected" \|
+"working" \| "complete" \| "installApps" \| "restricted" \| "error" \| "trellis"
+\| "games" \| "oyster" \| "tourtois" \| "allApps" \| "browser" \| "internet" \|
 "members" \| "sell" \| "schedule" \| "loop" \| "fungi"
 
 ---
@@ -132,11 +134,11 @@ Decorative identities; the enclosing control owns its accessible name.
 
 #### Parameters
 
-| Parameter                 | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `__namedParameters`       | \{ `name`: \| `"search"` \| `"bonsai"` \| `"computer"` \| `"prints"` \| `"inkcap"` \| `"vishnu"` \| `"generateText"` \| `"generateMedia"` \| `"buyApps"` \| `"browseBazaar"` \| `"agent"` \| `"list"` \| `"chat"` \| `"read"` \| `"readConversations"` \| `"listAgents"` \| `"createAgents"` \| `"sendPrompts"` \| `"write"` \| `"run"` \| `"connected"` \| `"working"` \| `"complete"` \| `"installApps"` \| `"restricted"` \| `"error"` \| `"trellis"` \| `"games"` \| `"oyster"` \| `"tourtois"` \| `"allApps"` \| `"browser"` \| `"internet"` \| `"members"` \| `"sell"` \| `"schedule"` \| `"loop"` \| `"fungi"`; `size?`: `number`; \} |
-| `__namedParameters.name`  | \| `"search"` \| `"bonsai"` \| `"computer"` \| `"prints"` \| `"inkcap"` \| `"vishnu"` \| `"generateText"` \| `"generateMedia"` \| `"buyApps"` \| `"browseBazaar"` \| `"agent"` \| `"list"` \| `"chat"` \| `"read"` \| `"readConversations"` \| `"listAgents"` \| `"createAgents"` \| `"sendPrompts"` \| `"write"` \| `"run"` \| `"connected"` \| `"working"` \| `"complete"` \| `"installApps"` \| `"restricted"` \| `"error"` \| `"trellis"` \| `"games"` \| `"oyster"` \| `"tourtois"` \| `"allApps"` \| `"browser"` \| `"internet"` \| `"members"` \| `"sell"` \| `"schedule"` \| `"loop"` \| `"fungi"`                                   |
-| `__namedParameters.size?` | `number`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Parameter                 | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `__namedParameters`       | \{ `name`: \| `"search"` \| `"bonsai"` \| `"computer"` \| `"prints"` \| `"inkcap"` \| `"vishnu"` \| `"generateText"` \| `"generateMedia"` \| `"buyApps"` \| `"browseBazaar"` \| `"agent"` \| `"list"` \| `"chat"` \| `"read"` \| `"readConversations"` \| `"listAgents"` \| `"createAgents"` \| `"sendPrompts"` \| `"write"` \| `"run"` \| `"stop"` \| `"connected"` \| `"working"` \| `"complete"` \| `"installApps"` \| `"restricted"` \| `"error"` \| `"trellis"` \| `"games"` \| `"oyster"` \| `"tourtois"` \| `"allApps"` \| `"browser"` \| `"internet"` \| `"members"` \| `"sell"` \| `"schedule"` \| `"loop"` \| `"fungi"`; `size?`: `number`; \} |
+| `__namedParameters.name`  | \| `"search"` \| `"bonsai"` \| `"computer"` \| `"prints"` \| `"inkcap"` \| `"vishnu"` \| `"generateText"` \| `"generateMedia"` \| `"buyApps"` \| `"browseBazaar"` \| `"agent"` \| `"list"` \| `"chat"` \| `"read"` \| `"readConversations"` \| `"listAgents"` \| `"createAgents"` \| `"sendPrompts"` \| `"write"` \| `"run"` \| `"stop"` \| `"connected"` \| `"working"` \| `"complete"` \| `"installApps"` \| `"restricted"` \| `"error"` \| `"trellis"` \| `"games"` \| `"oyster"` \| `"tourtois"` \| `"allApps"` \| `"browser"` \| `"internet"` \| `"members"` \| `"sell"` \| `"schedule"` \| `"loop"` \| `"fungi"`                                   |
+| `__namedParameters.size?` | `number`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 #### Returns
 

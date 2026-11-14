@@ -1,5 +1,13 @@
 # @fungi.computer/sigils
 
+## 0.3.2
+
+### Patch Changes
+
+- Changes since 0.3.1:
+
+  - fix(tourtois): confirm Stop with Cancel and Stop, add a stop sigil
+
 ## 0.3.1
 
 ### Patch Changes

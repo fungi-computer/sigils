@@ -299,6 +299,15 @@ export const marks: readonly Mark[] = [
     sigil: "run",
   },
   {
+    id: "stop-computer",
+    name: "Stop",
+    group: "Actions",
+    status: "Live",
+    detail: "A coral rounded square for stopping a running Computer.",
+    example: "Stop key beside Start",
+    sigil: "stop",
+  },
+  {
     id: "delete-files",
     name: "Erase document",
     group: "Actions",
