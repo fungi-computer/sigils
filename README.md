@@ -1,18 +1,17 @@
 # Sigils (`@fungi.computer/sigils`)
 
-Sigils provides decorative SVG marks for Fungi interfaces. Its gallery shows the
-marks alongside reference artwork and visual studies, so consumers can check
-which drawings are approved, live, or still concepts.
+Sigils are Fungi's decorative SVG marks for interfaces, with a gallery that
+shows which drawings are approved, live or still concepts.
 
-## Install or set up
-
-```sh
-npm install @fungi.computer/sigils react
-```
-
-Sigils needs React 18.3 or 19.2 as a peer dependency.
+![The Sigils gallery: the faces of the Apps on a desktop, as drawn marks](docs/media/readme-sigils.png)
 
 ## Quick start
+
+Install it:
+
+```sh
+npm install @fungi.computer/sigils
+```
 
 This illustrative example renders one decorative mark. Give its enclosing
 control its own accessible name:
@@ -27,6 +26,41 @@ import { Sigil } from "@fungi.computer/sigils";
 
 `Sigil` renders an aria-hidden SVG in a 64 by 64 view box. The caller controls
 its size and provides the accessible text on the surrounding control.
+
+## Common tasks
+
+### Draw a mark on a control
+
+`<Sigil name="list" size={24} />`, and give the surrounding control its own
+accessible name. See the Quick start.
+
+### Find the right mark
+
+Browse the gallery in the Ladle workbench. See Examples and checks.
+
+### Match theme colours
+
+See [Theme colours](#theme-colours).
+
+### Know the limits
+
+See Limits and errors.
+
+## Reference
+
+### Overview
+
+Sigils provides decorative SVG marks for Fungi interfaces. Its gallery shows the
+marks alongside reference artwork and visual studies, so consumers can check
+which drawings are approved, live, or still concepts.
+
+## Install or set up
+
+```sh
+npm install @fungi.computer/sigils react
+```
+
+Sigils needs React 18.3 or 19.2 as a peer dependency.
 
 ## Core concepts
 
